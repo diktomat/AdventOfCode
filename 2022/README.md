@@ -10,3 +10,4 @@ One day, one programming language.. (until I grow tired of it):
 6. Clojure. If only it wasn't built on Java..
 7. Lua. No off-by-one errors today.
 8. VimScript. Thank goodness there's Neovim with Fennel nowadays.
+9. Zig. Why Zig when there's Rust?
