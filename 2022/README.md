@@ -12,3 +12,4 @@ One day, one programming language.. (until I grow tired of it):
 8. VimScript. Thank goodness there's Neovim with Fennel nowadays.
 9. Zig. Why Zig when there's Rust?
 10. Fish. Really a more friendly shell.
+11. Raku (Perl 6). `grammar` looks nice.
