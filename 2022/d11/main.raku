@@ -1,30 +1,30 @@
 #!/usr/bin/env raku
-use v6;
+use v6.d;
 
 grammar Monkey {
-	token TOP       { <monkey><items><operation><test><iftrue><iffalse> }
-	token monkey    { 'Monkey ' <num> ':'\n }
-	token items     { '  Starting items: ' [<num> ', '?]+\n }
-	token operation { '  Operation: new = old ' <op>' '[<num> | 'old']\n }
-	token test      { '  Test: divisible by ' <num>\n }
-	token iftrue    { '    If true: throw to monkey ' <num>\n }
-	token iffalse   { '    If false: throw to monkey ' <num> }
-	token num       { \d+ }
-	token op        { ['*' | '+'] }
+	rule TOP       { <monkey><items><operation><test><iftrue><iffalse> }
+	rule monkey    { 'Monkey' <num>':' }
+	rule items     { 'Starting items:' <num>+ % ', ' }
+	rule operation { 'Operation: new = old' <op> [<num> | 'old'] }
+	rule test      { 'Test: divisible by' <num> }
+	rule iftrue    { 'If true: throw to monkey' <num> }
+	rule iffalse   { 'If false: throw to monkey' <num> }
+	token num      { \d+ }
+	token op       { ['*' | '+'] }
 }
 
 my @monkeys;
 my $input = slurp "input.txt";
 for $input.split("\n\n") -> $inmonkey {
 	my %match = Monkey.subparse($inmonkey).hash;
-	my %monkey;
-	%monkey<items> = [%match<items><num>.clone, %match<items><num>.clone];
-	%monkey<op> = %match<operation><op>;
-	%monkey<opnum> = %match<operation><num>;
-	%monkey<test> = %match<test><num>;
-	%monkey<iftrue> = %match<iftrue><num>;
-	%monkey<iffalse> = %match<iffalse><num>;
-	%monkey<business> = [0, 0];
+	my %monkey =
+		items    => [%match<items><num>.clone, %match<items><num>.clone],
+		op       => %match<operation><op>,
+		opnum    => %match<operation><num>,
+		test     => %match<test><num>,
+		iftrue   => %match<iftrue><num>,
+		iffalse  => %match<iffalse><num>,
+		business => [0, 0];
 	@monkeys.push(%monkey)
 }
 
