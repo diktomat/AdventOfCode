@@ -13,3 +13,4 @@ One day, one programming language.. (until I grow tired of it):
 9. Zig. Why Zig when there's Rust?
 10. Fish. Really a more friendly shell.
 11. Raku (Perl 6). `grammar` looks nice.
+12. Swift. Kinda torn on this one.
