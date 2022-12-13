@@ -14,3 +14,4 @@ One day, one programming language.. (until I grow tired of it):
 10. Fish. Really a more friendly shell.
 11. Raku (Perl 6). `grammar` looks nice.
 12. Swift. Kinda torn on this one.
+13. Haskell. GHC warns when using tabs, wtf?
