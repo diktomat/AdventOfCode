@@ -15,3 +15,4 @@ One day, one programming language.. (until I grow tired of it):
 11. Raku (Perl 6). `grammar` looks nice.
 12. Swift. Kinda torn on this one.
 13. Haskell. GHC warns when using tabs, wtf?
+14. Nim. Compiled and statically-typed Python: Nice. Not allowing tabs for indention: Not nice.
