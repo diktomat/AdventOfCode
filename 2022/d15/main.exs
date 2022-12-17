@@ -1,7 +1,5 @@
 infile = "input.txt"
-# infile = "sample.txt"
 searchrow = 2_000_000
-# searchrow = 10
 
 distance = fn x1, y1, x2, y2 -> abs(x2 - x1) + abs(y2 - y1) end
 
@@ -33,3 +31,8 @@ end)
 |> Enum.filter(fn x -> !Enum.any?(blocked_on_searchrow, fn bx -> x == bx end) end)
 |> Enum.count()
 |> IO.puts()
+
+# For part 2 see part2.rs.
+# I implemented the same algorithm in Elixir first, but when it was still running after
+# 20h and after verifying on Reddit that my approach was sound, I just redid it in Rust,
+# where it (same algorithm, as said) takes only 650ms to give the correct answer.
