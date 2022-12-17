@@ -17,3 +17,4 @@ One day, one programming language.. (until I grow tired of it):
 13. Haskell. GHC warns when using tabs, wtf?
 14. Nim. Compiled and statically-typed Python: Nice. Not allowing tabs for indention: Not nice.
 15. Elixir (and Rust). Don't know why part 2 run for hours in Elixir, when the same algorithm finishes within 650ms in Rust..
+16. Crystal. Basically Ruby, compiled.
