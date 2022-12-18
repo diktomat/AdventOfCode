@@ -19,3 +19,4 @@ One day, one programming language.. (until I grow tired of it):
 15. Elixir (and Rust). Don't know why part 2 run for hours in Elixir, when the same algorithm finishes within 650ms in Rust..
 16. Crystal. Basically Ruby, compiled.
 17. Dart. Feels like C with modern types.
+18. Racket. Try the rainbow, use a rainbow (plugin).
