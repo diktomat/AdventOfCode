@@ -21,3 +21,4 @@ One day, one programming language.. (until I grow tired of it):
 17. Dart. Feels like C with modern types.
 18. Racket. Try the rainbow, use a rainbow (plugin).
 20. D. A systems programming language with GC by default.
+21. Pascal. Oh these flashback, learning pragramming with Delphi back then..
