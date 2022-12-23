@@ -23,3 +23,4 @@ One day, one programming language.. (until I grow tired of it):
 20. D. A systems programming language with GC by default.
 21. Pascal. Oh these flashback, learning pragramming with Delphi back then..
 22. Odin. Feels a lot like Go. Has a much nicer name though!
+23. TypeScript. Better than JS. But it's still JS...
