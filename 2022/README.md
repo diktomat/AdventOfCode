@@ -20,7 +20,9 @@ One day, one programming language.. (until I grow tired of it):
 16. Crystal. Basically Ruby, compiled.
 17. Dart. Feels like C with modern types.
 18. Racket. Try the rainbow, use a rainbow (plugin).
+19. TODO
 20. D. A systems programming language with GC by default.
 21. Pascal. Oh these flashback, learning pragramming with Delphi back then..
 22. Odin. Feels a lot like Go. Has a much nicer name though!
 23. TypeScript. Better than JS. But it's still JS...
+24. Julia. Bit minimal for my taste.
