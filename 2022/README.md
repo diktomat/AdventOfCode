@@ -26,3 +26,4 @@ One day, one programming language.. (until I grow tired of it):
 22. Odin. Feels a lot like Go. Has a much nicer name though!
 23. TypeScript. Better than JS. But it's still JS...
 24. Julia. Bit minimal for my taste.
+25. Objective C. Objective weirdness.
