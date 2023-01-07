@@ -5,7 +5,7 @@ pub fn part1() -> usize {
 		.lines()
 		.map(|present| {
 			let sides = present
-				.split("x")
+				.split('x')
 				.map(|side| side.parse::<usize>().unwrap())
 				.tuple_combinations()
 				.map(|(x, y)| 2 * x * y);
@@ -19,7 +19,7 @@ pub fn part2() -> usize {
 		.lines()
 		.map(|present| {
 			let present = present
-				.split("x")
+				.split('x')
 				.map(|side| side.parse::<usize>().unwrap());
 			let wrap = present
 				.clone()
