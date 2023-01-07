@@ -15,3 +15,10 @@ fn day03() {
 	assert_eq!(d03::part1(), 2081);
 	assert_eq!(d03::part2(), 2341);
 }
+
+#[test]
+#[ignore] // takes >15s in debug
+fn day04() {
+	assert_eq!(d04::part1(), 117946);
+	assert_eq!(d04::part2(), 3938038);
+}
