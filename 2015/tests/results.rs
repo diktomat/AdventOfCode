@@ -22,3 +22,9 @@ fn day04() {
 	assert_eq!(d04::part1(), 117946);
 	assert_eq!(d04::part2(), 3938038);
 }
+
+#[test]
+fn day05() {
+	assert_eq!(d05::part1(), 258);
+	assert_eq!(d05::part2(), 53);
+}
