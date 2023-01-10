@@ -1,0 +1,33 @@
+#!/usr/bin/env fish
+
+set DAY $argv[1]
+
+cargo new d$DAY
+
+echo -e "d$DAY = { path = \"d$DAY\" }" >> Cargo.toml
+
+echo -e "" >> tests/results.rs
+echo -e "#[test]" >> tests/results.rs
+echo -e "fn day$DAY() {" >> tests/results.rs
+echo -e "\tassert_eq!(d$DAY::part1(), 1);" >> tests/results.rs
+echo -e "\tassert_eq!(d$DAY::part2(), 1);" >> tests/results.rs
+echo -e "}" >> tests/results.rs
+
+echo -e "pub fn part1() -> usize {" >> d$DAY/src/lib.rs
+echo -e "\t0" >> d$DAY/src/lib.rs
+echo -e "}" >> d$DAY/src/lib.rs
+echo -e "" >> d$DAY/src/lib.rs
+echo -e "pub fn part2() -> usize {" >> d$DAY/src/lib.rs
+echo -e "\t0" >> d$DAY/src/lib.rs
+echo -e "}" >> d$DAY/src/lib.rs
+
+echo -e "fn main() {" > d$DAY/src/main.rs
+echo -e "\tprintln!(\"{}\", d$DAY::part1());" >> d$DAY/src/main.rs
+echo -e "\tprintln!(\"{}\", d$DAY::part2());" >> d$DAY/src/main.rs
+echo -e "}" >> d$DAY/src/main.rs
+
+echo -e "\tprintln!(\"Day $DAY Part 1: {}\", d$DAY::part1());" >> src/main.rs
+echo -e "\tprintln!(\"Day $DAY Part 2: {}\", d$DAY::part2());" >> src/main.rs
+sed -i bak 's/^}$//' src/main.rs
+rm src/main.rsbak
+echo -e "}" >> src/main.rs
