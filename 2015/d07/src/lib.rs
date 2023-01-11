@@ -1,4 +1,5 @@
 use std::collections::HashMap;
+
 use Instruction::*;
 use Wire::*;
 
@@ -28,10 +29,11 @@ enum Wire {
 	Gate(u16),
 	Value(u16),
 }
+
 impl std::fmt::Debug for Wire {
 	fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
 		match self {
-			Value(val) => f.write_fmt(format_args!("{}", val)),
+			Value(val) => f.write_fmt(format_args!("{val}")),
 			Gate(val) => {
 				let left = (val & 0xFF00) >> 8;
 				let right = val & 0xFF;
@@ -52,10 +54,11 @@ enum Instruction {
 	RShift(Wire, Wire),
 	LShift(Wire, Wire),
 }
+
 impl std::fmt::Debug for Instruction {
 	fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
 		match self {
-			Let(from) => f.write_fmt(format_args!("= {:?}", from)),
+			Let(from) => f.write_fmt(format_args!("= {from:?}")),
 			And(left, right) => f.write_fmt(format_args!("{left:?} & {right:?}")),
 			Or(left, right) => f.write_fmt(format_args!("{left:?} | {right:?}")),
 			Not(left) => f.write_fmt(format_args!("!{left:?}")),

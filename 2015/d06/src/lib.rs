@@ -2,7 +2,7 @@ use regex::Regex;
 
 pub fn part1() -> usize {
 	let re = Regex::new(r"(turn on|turn off|toggle) (\d+),(\d+) through (\d+),(\d+)").unwrap();
-	let mut lights = Box::new([[false; 1000]; 1000]);
+	let mut lights = vec![[false; 1000]; 1000];
 
 	for cap in re.captures_iter(include_str!("input.txt")) {
 		let p1: (usize, usize) = (cap[2].parse().unwrap(), cap[3].parse().unwrap());
@@ -27,7 +27,7 @@ pub fn part1() -> usize {
 
 pub fn part2() -> isize {
 	let re = Regex::new(r"(turn on|turn off|toggle) (\d+),(\d+) through (\d+),(\d+)").unwrap();
-	let mut lights = Box::new([[0; 1000]; 1000]);
+	let mut lights = vec![[0; 1000]; 1000];
 
 	for cap in re.captures_iter(include_str!("input.txt")) {
 		let p1: (usize, usize) = (cap[2].parse().unwrap(), cap[3].parse().unwrap());
