@@ -58,3 +58,9 @@ fn day10() {
 	assert_eq!(d10::part1(), 360154);
 	assert_eq!(d10::part2(), 5103798);
 }
+
+#[test]
+fn day11() {
+	assert_eq!(d11::part1(), "cqjxxyzz");
+	assert_eq!(d11::part2(), "cqkaabcc");
+}
