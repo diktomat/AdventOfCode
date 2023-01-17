@@ -39,4 +39,7 @@ fn main() {
 
 	println!("Day 13 Part 1: {}", d13::part1());
 	println!("Day 13 Part 2: {}", d13::part2());
+
+	println!("Day 14 Part 1: {}", d14::part1());
+	println!("Day 14 Part 2: {}", d14::part2());
 }

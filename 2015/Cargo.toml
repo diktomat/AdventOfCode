@@ -9,6 +9,7 @@ edition = "2021"
 [workspace.dependencies]
 itertools = "0.10.5"
 regex = "1.7.1"
+peg = "0.8.1"
 
 [dependencies]
 d01 = { path = "d01" }
@@ -24,3 +25,4 @@ d10 = { path = "d10" }
 d11 = { path = "d11" }
 d12 = { path = "d12" }
 d13 = { path = "d13" }
+d14 = { path = "d14" }

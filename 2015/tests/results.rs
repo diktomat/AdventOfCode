@@ -76,3 +76,9 @@ fn day13() {
 	assert_eq!(d13::part1(), 664);
 	assert_eq!(d13::part2(), 640);
 }
+
+#[test]
+fn day14() {
+	assert_eq!(d14::part1(), 2660);
+	assert_eq!(d14::part2(), 1256);
+}
