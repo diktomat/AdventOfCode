@@ -26,8 +26,7 @@ echo -e "\tprintln!(\"{}\", d$DAY::part1());" >> d$DAY/src/main.rs
 echo -e "\tprintln!(\"{}\", d$DAY::part2());" >> d$DAY/src/main.rs
 echo -e "}" >> d$DAY/src/main.rs
 
-echo -e "\tprintln!(\"Day $DAY Part 1: {}\", d$DAY::part1());" >> src/main.rs
-echo -e "\tprintln!(\"Day $DAY Part 2: {}\", d$DAY::part2());" >> src/main.rs
-sed -i bak 's/^}$//' src/main.rs
+echo -e "\tprint_day!(d$DAY);" >> src/main.rs
+sed -i bak '/^}$/d' src/main.rs
 rm src/main.rsbak
 echo -e "}" >> src/main.rs

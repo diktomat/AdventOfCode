@@ -1,45 +1,26 @@
 #![allow(non_snake_case)]
 
 fn main() {
-	println!("Day 01 Part 1: {}", d01::part1());
-	println!("Day 01 Part 2: {}", d01::part2());
+	macro_rules! print_day {
+		($day:ident) => {
+			let day = stringify!($day).replace('d', "");
+			println!("Day {day} Part 1: {}", $day::part1());
+			println!("Day {day} Part 2: {}", $day::part2());
+		};
+	}
 
-	println!("Day 02 Part 1: {}", d02::part1());
-	println!("Day 02 Part 2: {}", d02::part2());
-
-	println!("Day 03 Part 1: {}", d03::part1());
-	println!("Day 03 Part 2: {}", d03::part2());
-
-	println!("Day 04 Part 1: {}", d04::part1());
-	println!("Day 04 Part 2: {}", d04::part2());
-
-	println!("Day 05 Part 1: {}", d05::part1());
-	println!("Day 05 Part 2: {}", d05::part2());
-
-	println!("Day 06 Part 1: {}", d06::part1());
-	println!("Day 06 Part 2: {}", d06::part2());
-
-	println!("Day 07 Part 1: {}", d07::part1());
-	println!("Day 07 Part 2: {}", d07::part2());
-
-	println!("Day 08 Part 1: {}", d08::part1());
-	println!("Day 08 Part 2: {}", d08::part2());
-
-	println!("Day 09 Part 1: {}", d09::part1());
-	println!("Day 09 Part 2: {}", d09::part2());
-
-	println!("Day 10 Part 1: {}", d10::part1());
-	println!("Day 10 Part 2: {}", d10::part2());
-
-	println!("Day 11 Part 1: {}", d11::part1());
-	println!("Day 11 Part 2: {}", d11::part2());
-
-	println!("Day 12 Part 1: {}", d12::part1());
-	println!("Day 12 Part 2: {}", d12::part2());
-
-	println!("Day 13 Part 1: {}", d13::part1());
-	println!("Day 13 Part 2: {}", d13::part2());
-
-	println!("Day 14 Part 1: {}", d14::part1());
-	println!("Day 14 Part 2: {}", d14::part2());
+	print_day!(d01);
+	print_day!(d02);
+	print_day!(d03);
+	print_day!(d04);
+	print_day!(d05);
+	print_day!(d06);
+	print_day!(d07);
+	print_day!(d08);
+	print_day!(d09);
+	print_day!(d10);
+	print_day!(d11);
+	print_day!(d12);
+	print_day!(d13);
+	print_day!(d14);
 }
