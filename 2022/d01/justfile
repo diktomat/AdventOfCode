@@ -1,0 +1,12 @@
+run: build
+	./main
+
+build:
+	rustc main.rs
+
+test: build
+	#!/usr/bin/env fish
+	set result = (./main)
+	test $result[1] = 67633
+	test $result[2] = 199628
+	echo Test passed!
