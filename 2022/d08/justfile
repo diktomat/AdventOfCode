@@ -1,0 +1,10 @@
+run:
+	vim -nNesc':let&verbose=1|let&viminfo=""|source%|echo""|qall!' main.vim
+
+test:
+	#!/usr/bin/env fish
+	# Vim as scripting language is weird
+	set result (vim -nNesc':let&verbose=1|let&viminfo=""|source%|echo""|qall!' main.vim 2>&1)
+	test $result[2] = (printf '1789\r') || exit 1
+	test $result[3] = (printf '314820\r') || exit 1
+	echo Test passed!
