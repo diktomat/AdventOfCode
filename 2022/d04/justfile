@@ -1,0 +1,12 @@
+run: build
+	./main
+
+build:
+	cc -o main main.c
+
+test: build
+	#!/usr/bin/env fish
+	set result = (./main)
+	test $result[1] = 509
+	test $result[2] = 870
+	echo Test passed!
