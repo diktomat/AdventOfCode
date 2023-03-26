@@ -1,0 +1,9 @@
+run:
+	fish main.fish
+
+test:
+	#!/usr/bin/env fish
+	set result (fish main.fish)
+	test "$result[1..6]" = "███  ████ █  █ ████  ██    ██  ██  ███   █  █    █ █  █ █    █  █    █ █  █ █  █  █  █   █  ████ ███  █       █ █    ███   ███   █   █  █ █    █ ██    █ █    █  █  █ █  █    █  █ █    █  █ █  █ █  █ █  █  █  █ ████ █  █ █     ███  ██   ██  ███  " || exit 1
+	test $result[8] = 13860 || exit 1
+	echo Test passed!
