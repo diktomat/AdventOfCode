@@ -1,0 +1,9 @@
+run:
+	clojure -M main.clj
+
+test:
+	#!/usr/bin/env fish
+	set result (clojure -M main.clj)
+	test $result[1] = 1625 || exit 1
+	test $result[2] = 2250 || exit 1
+	echo Test passed!
