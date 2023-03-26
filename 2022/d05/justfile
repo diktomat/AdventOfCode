@@ -1,0 +1,9 @@
+run:
+	ruby main.rb
+
+test:
+	#!/usr/bin/env fish
+	set result (ruby main.rb)
+	test $result[1] = CWMTGHBDW || exit 1
+	test $result[2] = SSCGWJCRB || exit 1
+	echo Test passed!
