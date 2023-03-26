@@ -1,0 +1,9 @@
+run:
+	zig run main.zig
+
+test:
+	#!/usr/bin/env fish
+	set result (zig run main.zig 2>&1)
+	test $result[1] = 5960 || exit 1
+	test $result[2] = 2327 || exit 1
+	echo Test passed!
