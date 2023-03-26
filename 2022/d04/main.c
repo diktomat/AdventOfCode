@@ -29,14 +29,14 @@ int main() {
 		    (nums[2] >= nums[0] && nums[3] <= nums[1]))
 			part1++;
 
-		if ((unsigned)(nums[0]-nums[2]) <= (nums[3]-nums[2]) ||
-		    (unsigned)(nums[1]-nums[2]) <= (nums[3]-nums[2]) ||
-		    (unsigned)(nums[2]-nums[0]) <= (nums[1]-nums[0]) ||
-		    (unsigned)(nums[3]-nums[0]) <= (nums[1]-nums[0]))
+		if ((unsigned)(nums[0] - nums[2]) <= (nums[3] - nums[2]) ||
+		    (unsigned)(nums[1] - nums[2]) <= (nums[3] - nums[2]) ||
+		    (unsigned)(nums[2] - nums[0]) <= (nums[1] - nums[0]) ||
+		    (unsigned)(nums[3] - nums[0]) <= (nums[1] - nums[0]))
 			part2++;
 	}
-	printf("Part 1: %ld\n", part1);
-	printf("Part 2: %ld\n", part2);
+	printf("%ld\n", part1);
+	printf("%ld\n", part2);
 
 	fclose(fp);
 	return EXIT_SUCCESS;

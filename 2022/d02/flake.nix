@@ -1,7 +1,6 @@
 {
   description = "Advent of Code 2022 Day 2";
   inputs.utils.url = "github:numtide/flake-utils";
-  inputs.utils.inputs.nixpkgs.follows = "nixpkgs";
   outputs = {
     nixpkgs,
     utils,

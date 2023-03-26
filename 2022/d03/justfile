@@ -3,7 +3,7 @@ run:
 
 test:
 	#!/usr/bin/env fish
-	set result = (python3 main.py)
-	test $result[1] = 8493
-	test $result[2] = 2552
+	set result (python3 main.py)
+	test $result[1] = 8493 || exit 1
+	test $result[2] = 2552 || exit 1
 	echo Test passed!

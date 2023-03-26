@@ -6,7 +6,7 @@ build:
 
 test: build
 	#!/usr/bin/env fish
-	set result = (./main)
-	test $result[1] = 509
-	test $result[2] = 870
+	set result (./main)
+	test $result[1] = 509 || exit 1
+	test $result[2] = 870 || exit 1
 	echo Test passed!

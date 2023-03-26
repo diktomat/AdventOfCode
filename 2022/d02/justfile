@@ -3,7 +3,7 @@ run:
 
 test:
 	#!/usr/bin/env fish
-	set result = (go run main.go)
-	test $result[1] = 12276
-	test $result[2] = 9975
+	set result (go run main.go)
+	test $result[1] = 12276 || exit 1
+	test $result[2] = 9975 || exit 1
 	echo Test passed!
