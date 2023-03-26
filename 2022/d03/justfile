@@ -1,0 +1,9 @@
+run:
+	python3 main.py
+
+test:
+	#!/usr/bin/env fish
+	set result = (python3 main.py)
+	test $result[1] = 8493
+	test $result[2] = 2552
+	echo Test passed!
