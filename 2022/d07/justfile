@@ -1,0 +1,9 @@
+run:
+	lua main.lua
+
+test:
+	#!/usr/bin/env fish
+	set result (lua main.lua)
+	test $result[1] = 1206825 || exit 1
+	test $result[2] = 9608311 || exit 1
+	echo Test passed!
