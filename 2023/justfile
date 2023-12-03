@@ -1,0 +1,5 @@
+run $day="*/":
+	@for day in $day; do cd $day && cargo run -q && echo; cd ..; done
+
+test $day="*/":
+	@for day in $day; do cd $day && cargo nextest run --cargo-quiet && echo; cd ..; done
