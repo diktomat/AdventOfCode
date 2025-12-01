@@ -1,5 +1,3 @@
-#![allow(non_snake_case)]
-
 fn main() {
 	macro_rules! print_day {
 		($day:ident) => {

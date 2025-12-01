@@ -1,4 +1,10 @@
 fn main() {
+	if std::env::args().next_back() == Some("-p".into()) {
+		// plain output
+		println!("{}\n{}", d01::part1(false), d01::part2(false));
+		std::process::exit(0);
+	}
+
 	println!("Day 1");
 	println!(
 		"\tPart 1 Sample: {}, Input: {}",

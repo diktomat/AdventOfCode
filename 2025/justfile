@@ -5,7 +5,7 @@ testall:
     cargo nextest run --cargo-quiet --workspace
 
 run day:
-    @for day in {{ day }}; do cargo run -p {{ day }}; done
+    cargo run -p {{ day }}
 
 test day:
-    @for day in {{ day }}; do cargo nextest run --cargo-quiet -p {{ day }}; done
+    cargo nextest run --cargo-quiet -p {{ day }}
