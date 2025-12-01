@@ -1,0 +1,13 @@
+[package]
+name = "AoC2025"
+version = "0.1.0"
+edition = "2024"
+
+[workspace]
+[workspace.dependencies]
+# itertools = "0.10.5"
+# regex = "1.7.1"
+# peg = "0.8.1"
+
+[dependencies]
+d01 = { path = "d01" }

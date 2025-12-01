@@ -1,0 +1,13 @@
+#![allow(non_snake_case)]
+
+fn main() {
+	macro_rules! print_day {
+		($day:ident) => {
+			let day = stringify!($day).replace('d', "");
+			println!("Day {day} Part 1: {}", $day::part1(false));
+			println!("Day {day} Part 2: {}", $day::part2(false));
+		};
+	}
+
+	print_day!(d01);
+}
