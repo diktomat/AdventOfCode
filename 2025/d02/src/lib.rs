@@ -1,32 +1,38 @@
 static INPUT: &str = include_str!("input.txt");
 static SAMPLE: &str = include_str!("sample.txt");
 
-fn does_repeat(s: &str, n: usize) -> bool {
+fn does_repeat(s: &str, chunk_size: usize) -> bool {
 	let len = s.len();
-	if len % n != 0 {
+	if len % chunk_size != 0 {
 		return false;
 	};
-	let chunk_size = len / n;
 	if len == chunk_size {
 		return true;
 	}
+
 	let (left, rest) = s.split_at(chunk_size);
 	let (mid, _) = rest.split_at(chunk_size);
 	if left == mid {
-		return does_repeat(rest, n - 1);
+		return does_repeat(rest, chunk_size);
 	}
 	false
 }
 
 pub fn part1(use_sample: bool) -> usize {
-	let input = if use_sample { SAMPLE } else { INPUT };
-	input
+	if use_sample { SAMPLE } else { INPUT }
 		.trim_end()
 		.split(',')
 		.map(|range| {
 			let (start, stop) = range.split_once('-').expect("Malformed input!");
 			(start.parse::<usize>().unwrap()..=stop.parse::<usize>().unwrap())
-				.filter(|id| does_repeat(&id.to_string(), 2))
+				.filter(|id| {
+					let id = id.to_string();
+					let len = id.len();
+					if len % 2 != 0 {
+						return false;
+					}
+					does_repeat(&id, len / 2)
+				})
 				.sum::<usize>()
 		})
 		.sum()
@@ -41,7 +47,9 @@ pub fn part2(use_sample: bool) -> usize {
 			(start.parse::<usize>().unwrap()..=stop.parse::<usize>().unwrap())
 				.filter(|id| {
 					let id = id.to_string();
-					(2..=id.len()).any(|n| does_repeat(&id, n))
+					(1..=id.len() / 2)
+						.rev()
+						.any(|chunk_size| does_repeat(&id, chunk_size))
 				})
 				.sum::<usize>()
 		})
