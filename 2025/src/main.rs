@@ -9,4 +9,5 @@ fn main() {
 
 	print_day!(d01);
 	print_day!(d02);
+	print_day!(d03);
 }

@@ -12,3 +12,4 @@ edition = "2024"
 [dependencies]
 d01 = { path = "d01" }
 d02 = { path = "d02" }
+d03 = { path = "d03" }
