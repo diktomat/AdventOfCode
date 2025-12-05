@@ -13,3 +13,4 @@ edition = "2024"
 d01 = { path = "d01" }
 d02 = { path = "d02" }
 d03 = { path = "d03" }
+d04 = { path = "d04" }
