@@ -3,9 +3,3 @@ runall:
 
 testall:
     cargo nextest run --cargo-quiet --workspace
-
-run day:
-    cargo run -p {{ day }}
-
-test day:
-    cargo nextest run --cargo-quiet -p {{ day }}

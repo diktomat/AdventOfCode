@@ -5,7 +5,7 @@ fn main() {
 		std::process::exit(0);
 	}
 
-	println!("Day 2");
+	println!("Day 3");
 	println!(
 		"\tPart 1 Sample: {}, Input: {}",
 		d03::part1(true),
