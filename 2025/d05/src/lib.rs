@@ -36,7 +36,7 @@ pub fn part2(use_sample: bool) -> usize {
 		);
 		ranges.push(range);
 	}
-	ranges.sort_by(|a, b| a.0.cmp(&b.0));
+	ranges.sort_by_key(|a| a.0);
 	let mut i = 0;
 	let mut res = Vec::new();
 	while i < ranges.len() {

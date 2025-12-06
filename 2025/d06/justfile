@@ -1,0 +1,5 @@
+@run:
+    direnv exec $(pwd) ruby d06.rb
+
+@test:
+    direnv exec $(pwd) ruby d06.rb test
