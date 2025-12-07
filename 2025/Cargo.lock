@@ -11,6 +11,7 @@ dependencies = [
  "d03",
  "d04",
  "d05",
+ "d07",
 ]
 
 [[package]]
@@ -31,4 +32,8 @@ version = "0.1.0"
 
 [[package]]
 name = "d05"
+version = "0.1.0"
+
+[[package]]
+name = "d07"
 version = "0.1.0"
